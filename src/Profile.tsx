@@ -1,4 +1,9 @@
+import React from "react";
+
 function Profile() {
+  // random avatar each load
+  const avatarId = Math.floor(Math.random() * 100);
+
   return (
     <div
       style={{
@@ -11,7 +16,7 @@ function Profile() {
     >
       {/* Avatar */}
       <img
-        src="https://i.pravatar.cc/150"
+        src={`https://randomuser.me/api/portraits/men/${avatarId}.jpg`}
         alt="avatar"
         style={{
           width: "120px",
