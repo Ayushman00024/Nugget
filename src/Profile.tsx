@@ -1,5 +1,3 @@
-import React from "react";
-
 function Profile() {
   // random avatar each load
   const avatarId = Math.floor(Math.random() * 100);
