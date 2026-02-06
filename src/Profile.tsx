@@ -5,7 +5,7 @@ function Profile() {
   return (
     <div
       style={{
-        minHeight: "100vh",
+        minHeight: "100dvh", // ✅ changed
         background: "linear-gradient(180deg,#0f0f0f,#1a1a1a)",
         color: "white",
         padding: "20px",

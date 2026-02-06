@@ -20,18 +20,34 @@ function BottomNav() {
         display: "flex",
         justifyContent: "space-around",
         padding: "12px",
+        paddingBottom: "env(safe-area-inset-bottom)", // ✅ added
         background: "rgba(0,0,0,0.8)"
       }}
     >
-      <NavLink to="/" style={({isActive}) => isActive ? {...linkStyle, ...activeStyle} : linkStyle}>
+      <NavLink
+        to="/"
+        style={({ isActive }) =>
+          isActive ? { ...linkStyle, ...activeStyle } : linkStyle
+        }
+      >
         🏠
       </NavLink>
 
-      <NavLink to="/upload" style={({isActive}) => isActive ? {...linkStyle, ...activeStyle} : linkStyle}>
+      <NavLink
+        to="/upload"
+        style={({ isActive }) =>
+          isActive ? { ...linkStyle, ...activeStyle } : linkStyle
+        }
+      >
         ⬆️
       </NavLink>
 
-      <NavLink to="/profile" style={({isActive}) => isActive ? {...linkStyle, ...activeStyle} : linkStyle}>
+      <NavLink
+        to="/profile"
+        style={({ isActive }) =>
+          isActive ? { ...linkStyle, ...activeStyle } : linkStyle
+        }
+      >
         👤
       </NavLink>
     </div>

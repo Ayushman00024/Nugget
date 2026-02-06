@@ -10,7 +10,7 @@ function Upload() {
   return (
     <div
       style={{
-        height: "100vh",
+        height: "100dvh", // ✅ changed
         background: "linear-gradient(180deg,#0f0f0f,#1c1c1c)",
         display: "flex",
         justifyContent: "center",
