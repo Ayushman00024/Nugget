@@ -1,14 +1,12 @@
 import { NavLink } from "react-router-dom";
 
 function BottomNav() {
-  const linkStyle: React.CSSProperties = {
-    color: "white",
-    fontSize: "24px",
-    textDecoration: "none"
-  };
-
-  const activeStyle: React.CSSProperties = {
-    color: "red"
+  const iconStyle: React.CSSProperties = {
+    width: "26px",
+    height: "26px",
+    stroke: "white",
+    strokeWidth: 2,
+    fill: "none",
   };
 
   return (
@@ -19,36 +17,65 @@ function BottomNav() {
         width: "100%",
         display: "flex",
         justifyContent: "space-around",
-        padding: "12px",
-        paddingBottom: "env(safe-area-inset-bottom)", // ✅ added
-        background: "rgba(0,0,0,0.8)"
+        alignItems: "center",
+        padding: "12px 0",
+        paddingBottom: "env(safe-area-inset-bottom)",
+        background: "black",
+        borderTop: "1px solid #222",
+        zIndex: 1000,
       }}
     >
-      <NavLink
-        to="/"
-        style={({ isActive }) =>
-          isActive ? { ...linkStyle, ...activeStyle } : linkStyle
-        }
-      >
-        🏠
+      {/* Home */}
+      <NavLink to="/">
+        {({ isActive }) => (
+          <svg
+            viewBox="0 0 24 24"
+            style={{
+              ...iconStyle,
+              opacity: isActive ? 1 : 0.6,
+              transform: isActive ? "scale(1.1)" : "scale(1)",
+              transition: "0.15s",
+            }}
+          >
+            <path d="M3 11L12 4l9 7" />
+            <path d="M5 10v10h14V10" />
+          </svg>
+        )}
       </NavLink>
 
-      <NavLink
-        to="/upload"
-        style={({ isActive }) =>
-          isActive ? { ...linkStyle, ...activeStyle } : linkStyle
-        }
-      >
-        ⬆️
+      {/* Upload (+) */}
+      <NavLink to="/upload">
+        {({ isActive }) => (
+          <svg
+            viewBox="0 0 24 24"
+            style={{
+              ...iconStyle,
+              opacity: isActive ? 1 : 0.6,
+              transform: isActive ? "scale(1.1)" : "scale(1)",
+              transition: "0.15s",
+            }}
+          >
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        )}
       </NavLink>
 
-      <NavLink
-        to="/profile"
-        style={({ isActive }) =>
-          isActive ? { ...linkStyle, ...activeStyle } : linkStyle
-        }
-      >
-        👤
+      {/* Profile */}
+      <NavLink to="/profile">
+        {({ isActive }) => (
+          <svg
+            viewBox="0 0 24 24"
+            style={{
+              ...iconStyle,
+              opacity: isActive ? 1 : 0.6,
+              transform: isActive ? "scale(1.1)" : "scale(1)",
+              transition: "0.15s",
+            }}
+          >
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c2-4 14-4 16 0" />
+          </svg>
+        )}
       </NavLink>
     </div>
   );

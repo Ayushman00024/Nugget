@@ -1,12 +1,11 @@
 function Profile() {
-  // random avatar each load
   const avatarId = Math.floor(Math.random() * 100);
 
   return (
     <div
       style={{
-        minHeight: "100dvh", // ✅ changed
-        background: "linear-gradient(180deg,#0f0f0f,#1a1a1a)",
+        minHeight: "100dvh",
+        background: "black",
         color: "white",
         padding: "20px",
         textAlign: "center"
@@ -17,10 +16,10 @@ function Profile() {
         src={`https://randomuser.me/api/portraits/men/${avatarId}.jpg`}
         alt="avatar"
         style={{
-          width: "120px",
-          height: "120px",
+          width: "110px",
+          height: "110px",
           borderRadius: "50%",
-          border: "3px solid #ff0050",
+          border: "2px solid white",
           objectFit: "cover",
           marginTop: "30px"
         }}
@@ -30,8 +29,8 @@ function Profile() {
       <h2 style={{ marginTop: "15px" }}>@yourname</h2>
 
       {/* Bio */}
-      <p style={{ opacity: 0.7 }}>
-        🎬 Creator | 🚀 Building cool stuff
+      <p style={{ opacity: 0.6 }}>
+        Creator • Building cool stuff
       </p>
 
       {/* Stats */}
@@ -62,19 +61,20 @@ function Profile() {
       <button
         style={{
           marginTop: "25px",
-          padding: "12px 25px",
-          borderRadius: "25px",
-          border: "none",
-          background: "linear-gradient(45deg,#ff0050,#ff7a00)",
+          padding: "12px",
+          borderRadius: "8px",
+          border: "1px solid white",
+          background: "black",
           color: "white",
-          fontWeight: "bold",
-          cursor: "pointer"
+          fontWeight: "600",
+          cursor: "pointer",
+          width: "100%"
         }}
       >
-        Edit Profile ✏️
+        Edit Profile
       </button>
 
-      {/* Video grid placeholder */}
+      {/* Video grid */}
       <h3 style={{ marginTop: "40px" }}>Your Videos</h3>
 
       <div
@@ -89,9 +89,10 @@ function Profile() {
           <div
             key={i}
             style={{
-              background: "#222",
+              background: "#111",
               height: "120px",
-              borderRadius: "10px"
+              borderRadius: "6px",
+              border: "1px solid #222"
             }}
           />
         ))}

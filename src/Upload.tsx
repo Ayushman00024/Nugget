@@ -10,8 +10,8 @@ function Upload() {
   return (
     <div
       style={{
-        height: "100dvh", // ✅ changed
-        background: "linear-gradient(180deg,#0f0f0f,#1c1c1c)",
+        height: "100dvh",
+        background: "black",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -21,17 +21,18 @@ function Upload() {
       {/* Upload Card */}
       <div
         style={{
-          background: "#111",
+          background: "black",
           padding: "40px",
-          borderRadius: "20px",
+          borderRadius: "16px",
           textAlign: "center",
           width: "320px",
-          boxShadow: "0 0 30px rgba(255,255,255,0.1)"
+          border: "1px solid #222"
         }}
       >
-        <h1 style={{ marginBottom: "10px" }}>Upload 🎬</h1>
-        <p style={{ opacity: 0.7, marginBottom: "30px" }}>
-          Share your video with the world
+        <h1 style={{ marginBottom: "10px" }}>Upload</h1>
+
+        <p style={{ opacity: 0.6, marginBottom: "30px" }}>
+          Share your video
         </p>
 
         {/* Hidden file input */}
@@ -46,18 +47,18 @@ function Upload() {
         <button
           onClick={handleClick}
           style={{
-            background: "linear-gradient(45deg,#ff0050,#ff7a00)",
+            background: "white",
+            color: "black",
             border: "none",
-            padding: "15px 25px",
-            borderRadius: "30px",
-            color: "white",
-            fontSize: "16px",
+            padding: "14px",
+            borderRadius: "8px",
+            fontSize: "15px",
             cursor: "pointer",
             width: "100%",
-            fontWeight: "bold"
+            fontWeight: "600"
           }}
         >
-          Select Video 📁
+          Select Video
         </button>
 
         {/* Drag area */}
@@ -65,12 +66,12 @@ function Upload() {
           style={{
             marginTop: "25px",
             padding: "20px",
-            border: "2px dashed #333",
-            borderRadius: "15px",
+            border: "1px dashed #333",
+            borderRadius: "10px",
             opacity: 0.6
           }}
         >
-          Drag & Drop Video Here
+          Drag & Drop
         </div>
       </div>
     </div>
