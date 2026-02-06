@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 function BottomNav() {
   const iconStyle: React.CSSProperties = {
-    width: "26px",
-    height: "26px",
+    width: "30px",   // ✅ bigger icons
+    height: "30px",
     stroke: "white",
     strokeWidth: 2,
     fill: "none",
@@ -18,8 +18,8 @@ function BottomNav() {
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
-        padding: "12px 0",
-        paddingBottom: "env(safe-area-inset-bottom)",
+        padding: "16px 0", // ✅ taller bar
+        paddingBottom: "calc(env(safe-area-inset-bottom) + 6px)",
         background: "black",
         borderTop: "1px solid #222",
         zIndex: 1000,
@@ -33,7 +33,7 @@ function BottomNav() {
             style={{
               ...iconStyle,
               opacity: isActive ? 1 : 0.6,
-              transform: isActive ? "scale(1.1)" : "scale(1)",
+              transform: isActive ? "scale(1.15)" : "scale(1)",
               transition: "0.15s",
             }}
           >
@@ -43,7 +43,7 @@ function BottomNav() {
         )}
       </NavLink>
 
-      {/* Upload (+) */}
+      {/* Upload */}
       <NavLink to="/upload">
         {({ isActive }) => (
           <svg
@@ -51,7 +51,7 @@ function BottomNav() {
             style={{
               ...iconStyle,
               opacity: isActive ? 1 : 0.6,
-              transform: isActive ? "scale(1.1)" : "scale(1)",
+              transform: isActive ? "scale(1.15)" : "scale(1)",
               transition: "0.15s",
             }}
           >
@@ -68,7 +68,7 @@ function BottomNav() {
             style={{
               ...iconStyle,
               opacity: isActive ? 1 : 0.6,
-              transform: isActive ? "scale(1.1)" : "scale(1)",
+              transform: isActive ? "scale(1.15)" : "scale(1)",
               transition: "0.15s",
             }}
           >
